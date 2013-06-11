@@ -1,0 +1,29 @@
+.extension-guaketabs-inactive {
+    font-weight: bold;
+    padding: 0.1em;
+    color: #61B4CF;
+}
+
+.extension-guaketabs-inactive-hover {
+    font-weight: bold;
+    padding: 0.1em;
+    font-size: 1.10em;
+    background-color: #333333;
+    color: #63DD8D;
+}
+
+.extension-guaketabs-active {
+    font-weight: bold;
+    padding: 0.1em;
+    font-size: 1.10em;
+    background-color: #333333;
+    color: #37DD6F;
+}
+
+.extension-guaketabs-active-hover {
+    font-weight: bold;
+    padding: 0.1em;
+    font-size: 1.10em;
+    background-color: #333333;
+    color: #37DD6F;
+}

@@ -1,0 +1,6 @@
+# vim ~
+*~
+
+# IDE junk
+*.sublime-workspace
+*.sublime-project
