@@ -132,10 +132,18 @@ function redraw_tabs() {
     // Draw all tabs as INACTIVE style
   for (var i=0; i<guake_tabs.length;i++) {
     guake_tabs[i].modify_state(IS_INACTIVE);
-  }
+  }    
     // Get the selected tab and style it as ACTIVE
-  [selected_tab_index, err] = proxy.get_selected_tabSync();
-  guake_tabs[selected_tab_index].modify_state(IS_ACTIVE);
+  try {
+    [selected_tab_index, err] = proxy.get_selected_tabSync();
+    guake_tabs[selected_tab_index].modify_state(IS_ACTIVE);
+  } catch (err) {
+    // It is possible that a user creates a new tab and selects it before our redraw_tabs loop
+    // has the opportunity to append it to the guake_tabs array, resulting in an index lookup error:
+    // " TypeError: guake_tabs[selected_tab_index] is undefined "
+    // Ergo, we wrap in try/catch -- and no tab is marked as active (e.g. green font) until next loop
+  }
+
   // Step 3) Return true to ensure function continues looping from Mainloop.timeout callback
   return true;
 }
