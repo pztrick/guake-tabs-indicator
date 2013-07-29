@@ -90,7 +90,9 @@ var GuakeTabButton = new Lang.Class({
       }
       this.label.style_class = css_classes;
       this.label.set_text(this._get_label_text());
-      this.actor.add_actor(this.label);
+      if (!this.actor.contains(this.label)){
+        this.actor.add_actor(this.label);
+      }
     },
 
     _openTab: function(actor, event){
