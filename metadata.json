@@ -2,7 +2,7 @@
   "description": "Displays available Guake terminal sessions in tabs on the GNOME Shell", 
   "name": "Guake Tabs Indicator", 
   "shell-version": [
-    "3.8"
+    "3.10"
   ], 
   "url": "https://github.com/pztrick/guake-tabs-indicator", 
   "uuid": "guaketabs@pztrick.com" ,

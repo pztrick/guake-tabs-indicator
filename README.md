@@ -1,5 +1,5 @@
 ## Guake Tabs Indicator
-_Guake Tabs Indicator_ is an extension for GNOME Shell 3.8 which displays terminal tabs on the GNOME top panel.
+_Guake Tabs Indicator_ is an extension for GNOME Shell 3.8-3.10 which displays terminal tabs on the GNOME top panel.
 
 ![Screenshot](https://raw.github.com/pztrick/guake-tabs-indicator/screenshots/screenshot.png)
 
